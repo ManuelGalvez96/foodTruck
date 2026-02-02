@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Food Truck</title>
+</head>
+<body>
+   <!-- Checkbox oculto para controlar el modal -->
+   <input type="checkbox" id="loginModal" hidden>
+   
+   <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container-fluid">
+                <!-- Logo (Navbrand) -->
+                <a class="navbar-brand" href="#">🚚 Food Truck</a>
+                
+                <!-- Botón hamburguesa para móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="nav nav-pills me-auto mb-2 mb-lg-0">
+                        <!-- Fred -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="fredDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Fred
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="fredDropdown">
+                                <li><a class="dropdown-item" href="#entrepaiber">Entrepà de ibèric</a></li>
+                                <li><a class="dropdown-item" href="#entrepaformat">Entrepà formatge</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Calent -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="calentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Calent</a>
+                            <ul class="dropdown-menu" aria-labelledby="calentDropdown">
+                                <li><a class="dropdown-item" href="#burger">Burger</a></li>
+                                <li><a class="dropdown-item" href="#frankfurt">Frankfurt</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Dolços -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dolcosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dolços</a>
+                            <ul class="dropdown-menu" aria-labelledby="dolcosDropdown">
+                                <li><a class="dropdown-item" href="#magnum">Gelat Magnum</a></li>
+                                <li><a class="dropdown-item" href="#crepe">Crêppe xocolata</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Begudes -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="begudesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Begudes</a>
+                            <ul class="dropdown-menu" aria-labelledby="begudesDropdown">
+                                <li><a class="dropdown-item" href="#cocacola">Coca Cola</a></li>
+                                <li><a class="dropdown-item" href="#cervesa">Cervesa</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <!-- Título del sitio web -->
+                    <span class="site-title d-none d-lg-block" id="bienvenida"></span>
+                    <span class="site-title d-none d-lg-block">El Millor Menjar de Carrer</span>
+                    
+                    <!-- Menú adicional -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="quisom.html">Qui som</a>
+                        </li>
+                        <li class="nav-item">
+                            <label for="loginModal" class="nav-link" style="cursor: pointer;">
+                                <i class="bi bi-box-arrow-in-right"></i> Login
+                            </label>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+   </header>
+   
+   <!-- Modal de Login -->
+   <div class="login-modal">
+       <div class="modal-content-custom">
+           <label for="loginModal" class="close-modal">&times;</label>
+           <h4 class="mb-3">Iniciar Sessió</h4>
+           <form id="loginForm" method="#" action="#">
+               <div class="mb-3">
+                   <label for="username" class="form-label">Nom d'usuari:</label>
+                   <input type="text" class="form-control" id="username" name="username" required>
+               </div>
+               <div class="mb-3">
+                   <label for="password" class="form-label">Contrasenya:</label>
+                   <input type="password" class="form-control" id="password" name="password" required>
+               </div>
+               <div class="d-flex gap-2">
+                   <button type="submit" class="btn btn-primary">Enviar</button>
+                   <label for="loginModal" class="btn btn-secondary">Cancel·lar</label>
+               </div>
+           </form>
+       </div>
+   </div>
+   
+   <footer>
+
+   </footer>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
