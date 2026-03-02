@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Qui Som - Food Truck</title>
+</head>
+<body>
+   <!-- Checkbox oculto para controlar el modal -->
+   <input type="checkbox" id="loginModal" hidden>
+   
+   <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container-fluid">
+                <!-- Logo (Navbrand) -->
+                <a class="navbar-brand" href="index.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tornar a l'inici">🚚 Food Truck</a>
+                
+                <!-- Botón hamburguesa para móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="nav nav-pills me-auto mb-2 mb-lg-0">
+                        <!-- Fred -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="fredDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-title="Menjar fred" title="Menjar fred">
+                                Fred
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="fredDropdown">
+                                <li><a class="dropdown-item" href="entrepa-iberic.html">Entrepà de ibèric</a></li>
+                                <li><a class="dropdown-item" href="entrepa-formatge.html">Entrepà formatge</a></li>
+                                <li><a class="dropdown-item" href="entrepa-pernil.html">Entrepà pernil</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Calent -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="calentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-title="Menjar calent" title="Menjar calent">Calent</a>
+                            <ul class="dropdown-menu" aria-labelledby="calentDropdown">
+                                <li><a class="dropdown-item" href="burger.html">Burger</a></li>
+                                <li><a class="dropdown-item" href="frankfurt.html">Frankfurt</a></li>
+                                <li><a class="dropdown-item" href="pizza.html">Pizza</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Dolços -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dolcosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-title="Postres dolços" title="Postres dolços">Dolços</a>
+                            <ul class="dropdown-menu" aria-labelledby="dolcosDropdown">
+                                <li><a class="dropdown-item" href="gelat-magnum.html">Gelat Magnum</a></li>
+                                <li><a class="dropdown-item" href="crepe.html">Crêppe xocolata</a></li>
+                                <li><a class="dropdown-item" href="brownie.html">Brownie</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Begudes -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="begudesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-title="Begudes i refrescs" title="Begudes i refrescs">Begudes</a>
+                            <ul class="dropdown-menu" aria-labelledby="begudesDropdown">
+                                <li><a class="dropdown-item" href="cocacola.html">Coca Cola</a></li>
+                                <li><a class="dropdown-item" href="cervesa.html">Cervesa</a></li>
+                                <li><a class="dropdown-item" href="suc-natural.html">Suc natural</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <!-- Título del sitio web -->
+                    <span class="site-title d-none d-lg-block" id="bienvenida"></span>
+                    <span class="site-title d-none d-lg-block">El Millor Menjar de Carrer</span>
+                    
+                    <!-- Menú adicional -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="quisom.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Coneix la nostra història">Qui som</a>
+                        </li>
+                        <li class="nav-item">
+                            <label for="loginModal" class="nav-link" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Iniciar sessió">
+                                <i class="bi bi-box-arrow-in-right"></i> Login
+                            </label>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tancar sessió"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+   </header>
+   
+   <!-- Modal de Login -->
+   <div class="login-modal">
+       <div class="modal-content-custom">
+           <label for="loginModal" class="close-modal">&times;</label>
+           <h4 class="mb-3">Iniciar Sessió</h4>
+           <form id="loginForm" method="#" action="#">
+               <div class="mb-3">
+                   <label for="username" class="form-label">Nom d'usuari:</label>
+                   <input type="text" class="form-control" id="username" name="username" required>
+               </div>
+               <div class="mb-3">
+                   <label for="password" class="form-label">Contrasenya:</label>
+                   <input type="password" class="form-control" id="password" name="password" required>
+               </div>
+               <div class="d-flex gap-2">
+                   <button type="submit" class="btn btn-primary">Enviar</button>
+                   <label for="loginModal" class="btn btn-secondary">Cancel·lar</label>
+               </div>
+           </form>
+       </div>
+   </div>
+   
+   <!-- Breadcrumb -->
+   <nav aria-label="breadcrumb" class="container mt-3">
+       <ol class="breadcrumb">
+           <li class="breadcrumb-item"><a href="index.html">Inici</a></li>
+           <li class="breadcrumb-item active" aria-current="page">Qui som</li>
+       </ol>
+   </nav>
+   
+   <!-- Contenido de Qui som -->
+   <div class="container my-5">
+       <!-- Encabezado principal -->
+       <div class="text-center mb-5">
+           <h1 class="display-4 mb-3">🚚 Qui Som</h1>
+           <p class="lead text-muted">La història darrere del millor menjar de carrer de la ciutat</p>
+       </div>
+       
+       <!-- Nuestra Historia -->
+       <section class="mb-5">
+           <div class="row align-items-center">
+               <div class="col-lg-6 mb-4 mb-lg-0">
+                   <img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=600&h=400&fit=crop" class="img-fluid rounded shadow" alt="Food Truck">
+               </div>
+               <div class="col-lg-6">
+                   <h2 class="mb-4"><i class="bi bi-book text-primary"></i> La Nostra Història</h2>
+                   <p>
+                       El nostre Food Truck va néixer l'any 2020 d'un somni compartit: portar menjar de qualitat al carrer,
+                       amb ingredients frescos i sabors autèntics que recordessin a casa.
+                   </p>
+                   <p>
+                       Tres amics apassionats per la gastronomia vam decidir deixar les nostres feines i embarcar-nos en aquesta aventura.
+                       Des del primer dia, el nostre objectiu ha estat clar: <strong>oferir productes artesanals</strong> fets amb amor i dedicació.
+                   </p>
+                   <p>
+                       Avui, més de 5 anys després, continuem al peu del canó, servint els millors plats amb un somriure,
+                       i formant part de la vida quotidiana de milers de persones que confien en nosaltres cada dia.
+                   </p>
+               </div>
+           </div>
+       </section>
+       
+       <hr class="my-5">
+       
+       <!-- Nuestros Valores -->
+       <section class="mb-5">
+           <h2 class="text-center mb-5"><i class="bi bi-heart-fill text-danger"></i> Els Nostres Valors</h2>
+           <div class="row g-4">
+               <div class="col-md-4">
+                   <div class="card h-100 text-center shadow-sm">
+                       <div class="card-body">
+                           <i class="bi bi-star-fill text-warning fs-1 mb-3"></i>
+                           <h4 class="card-title">Qualitat</h4>
+                           <p class="card-text">
+                               Seleccionem els millors ingredients locals i de temporada per garantir 
+                               la màxima qualitat en cada plat.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="card h-100 text-center shadow-sm">
+                       <div class="card-body">
+                           <i class="bi bi-people-fill text-primary fs-1 mb-3"></i>
+                           <h4 class="card-title">Proximitat</h4>
+                           <p class="card-text">
+                               Ens encanta estar a prop dels nostres clients, conèixer-los i formar part 
+                               de la comunitat local.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="card h-100 text-center shadow-sm">
+                       <div class="card-body">
+                           <i class="bi bi-recycle text-success fs-1 mb-3"></i>
+                           <h4 class="card-title">Sostenibilitat</h4>
+                           <p class="card-text">
+                               Compromesos amb el medi ambient, utilitzem envasos biodegradables i 
+                               reduïm el malbaratament alimentari.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+       
+       <hr class="my-5">
+       
+       <!-- Dónde encontrarnos -->
+       <section class="mb-5">
+           <h2 class="text-center mb-5"><i class="bi bi-geo-alt-fill text-danger"></i> On Ens Trobaràs</h2>
+           <div class="row">
+               <div class="col-lg-6 mb-4">
+                   <div class="card shadow-sm h-100">
+                       <div class="card-body">
+                           <h4 class="card-title"><i class="bi bi-calendar-week text-primary"></i> Horari i Ubicacions</h4>
+                           <ul class="list-unstyled mt-3">
+                               <li class="mb-3">
+                                   <strong><i class="bi bi-clock"></i> Dilluns - Divendres:</strong><br>
+                                   Plaça Catalunya, Barcelona<br>
+                                   12:00h - 16:00h i 19:00h - 23:00h
+                               </li>
+                               <li class="mb-3">
+                                   <strong><i class="bi bi-clock"></i> Dissabtes:</strong><br>
+                                   Mercat de la Boqueria, Barcelona<br>
+                                   11:00h - 00:00h
+                               </li>
+                               <li class="mb-3">
+                                   <strong><i class="bi bi-clock"></i> Diumenges:</strong><br>
+                                   Parc de la Ciutadella, Barcelona<br>
+                                   12:00h - 20:00h
+                               </li>
+                           </ul>
+                           <div class="alert alert-info mt-3">
+                               <i class="bi bi-info-circle-fill"></i> <strong>Tip:</strong> Segueix-nos a Instagram per conèixer la nostra ubicació en temps real!
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-6 mb-4">
+                   <div class="card shadow-sm h-100">
+                       <div class="card-body">
+                           <h4 class="card-title"><i class="bi bi-envelope-fill text-danger"></i> Contacta amb Nosaltres</h4>
+                           <div class="mt-4">
+                               <div class="mb-3">
+                                   <i class="bi bi-telephone-fill text-success"></i> 
+                                   <strong>Telèfon:</strong> 
+                                   <a href="tel:+34612345678" class="text-decoration-none">+34 612 345 678</a>
+                               </div>
+                               <div class="mb-3">
+                                   <i class="bi bi-envelope-fill text-primary"></i> 
+                                   <strong>Email:</strong> 
+                                   <a href="mailto:info@foodtruck.cat" class="text-decoration-none">info@foodtruck.cat</a>
+                               </div>
+                               <div class="mb-3">
+                                   <i class="bi bi-whatsapp text-success"></i> 
+                                   <strong>WhatsApp:</strong> 
+                                   <a href="https://wa.me/34612345678" target="_blank" class="text-decoration-none">+34 612 345 678</a>
+                               </div>
+                               <div class="mb-3">
+                                   <i class="bi bi-instagram text-danger"></i> 
+                                   <strong>Instagram:</strong> 
+                                   <a href="https://instagram.com/foodtruck" target="_blank" class="text-decoration-none">@foodtruck_bcn</a>
+                               </div>
+                           </div>
+                           <div class="mt-4">
+                               <h5>Envía'ns un missatge:</h5>
+                               <form class="mt-3">
+                                   <div class="mb-3">
+                                       <input type="text" class="form-control" placeholder="El teu nom" required>
+                                   </div>
+                                   <div class="mb-3">
+                                       <input type="email" class="form-control" placeholder="El teu email" required>
+                                   </div>
+                                   <div class="mb-3">
+                                       <textarea class="form-control" rows="3" placeholder="El teu missatge" required></textarea>
+                                   </div>
+                                   <button type="submit" class="btn btn-primary w-100" data-bs-toggle="tooltip" title="Enviar missatge">
+                                       <i class="bi bi-send-fill"></i> Enviar Missatge
+                                   </button>
+                               </form>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+       
+       <hr class="my-5">
+       
+       <!-- Equipo -->
+       <section class="mb-5">
+           <h2 class="text-center mb-5"><i class="bi bi-people-fill text-primary"></i> El Nostre Equip</h2>
+           <div class="row g-4">
+               <div class="col-md-4">
+                   <div class="card text-center shadow-sm">
+                       <div class="card-body">
+                           <div class="mb-3">
+                               <i class="bi bi-person-circle fs-1 text-primary"></i>
+                           </div>
+                           <h5 class="card-title">Marc González</h5>
+                           <p class="text-muted">Chef Principal</p>
+                           <p class="card-text small">
+                               Amb més de 15 anys d'experiència en cuina mediterrània, Marc porta la passió 
+                               pel menjar autèntic a cada plat.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="card text-center shadow-sm">
+                       <div class="card-body">
+                           <div class="mb-3">
+                               <i class="bi bi-person-circle fs-1 text-success"></i>
+                           </div>
+                           <h5 class="card-title">Laura Martínez</h5>
+                           <p class="text-muted">Pastissera</p>
+                           <p class="card-text small">
+                               Especialista en dolços artesanals, Laura crea les delícies que endolceixen 
+                               el dia dels nostres clients.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="card text-center shadow-sm">
+                       <div class="card-body">
+                           <div class="mb-3">
+                               <i class="bi bi-person-circle fs-1 text-danger"></i>
+                           </div>
+                           <h5 class="card-title">Jordi Soler</h5>
+                           <p class="text-muted">Gestor i Atenció al Client</p>
+                           <p class="card-text small">
+                               El somriure del nostre Food Truck. Jordi s'assegura que cada client 
+                               tingui una experiència memorable.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+       
+       <!-- Call to Action -->
+       <section class="text-center my-5 py-5 bg-light rounded">
+           <h3 class="mb-4">Vine a Conèixer-nos!</h3>
+           <p class="lead mb-4">T'esperem amb el millor menjar de carrer i un somriure</p>
+           <a href="index.html" class="btn btn-primary btn-lg" data-bs-toggle="tooltip" title="Veure el nostre menú">
+               <i class="bi bi-arrow-left-circle"></i> Torna al Menú
+           </a>
+       </section>
+   </div>
+   
+   <!-- Alerta de Cookies -->
+   <div class="alert alert-warning alert-dismissible fade show cookie-alert" role="alert" id="cookieAlert">
+       <i class="bi bi-info-circle-fill"></i>
+       <strong>Cookies:</strong> Aquest lloc web utilitza cookies per millorar la teva experiència de navegació i guardar les teves preferències.
+       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Tancar" data-bs-toggle="tooltip" title="Tancar avís"></button>
+   </div>
+   
+   <footer class="bg-dark text-white text-center py-4">
+       <div class="container">
+           <h5 class="mb-3">Segueix-nos a les xarxes socials</h5>
+           <div class="social-icons mb-3">
+               <a href="https://www.facebook.com" target="_blank" class="text-white mx-2" data-bs-toggle="tooltip" title="Facebook">
+                   <i class="bi bi-facebook fs-3"></i>
+               </a>
+               <a href="https://www.instagram.com" target="_blank" class="text-white mx-2" data-bs-toggle="tooltip" title="Instagram">
+                   <i class="bi bi-instagram fs-3"></i>
+               </a>
+               <a href="https://www.twitter.com" target="_blank" class="text-white mx-2" data-bs-toggle="tooltip" title="Twitter">
+                   <i class="bi bi-twitter fs-3"></i>
+               </a>
+               <a href="https://www.youtube.com" target="_blank" class="text-white mx-2" data-bs-toggle="tooltip" title="YouTube">
+                   <i class="bi bi-youtube fs-3"></i>
+               </a>
+               <a href="https://www.tiktok.com" target="_blank" class="text-white mx-2" data-bs-toggle="tooltip" title="TikTok">
+                   <i class="bi bi-tiktok fs-3"></i>
+               </a>
+           </div>
+           <p class="mb-0">&copy; 2026 Food Truck. Tots els drets reservats.</p>
+       </div>
+   </footer>
+   
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>

@@ -6,69 +6,62 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Food Truck</title>
+    <title>Crêppe Xocolata - Food Truck</title>
 </head>
 <body>
-   <!-- Checkbox oculto para controlar el modal -->
    <input type="checkbox" id="loginModal" hidden>
    
    <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
             <div class="container-fluid">
-                <!-- Logo (Navbrand) -->
                 <a class="navbar-brand" href="index.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tornar a l'inici">🚚 Food Truck</a>
                 
-                <!-- Botón hamburguesa para móviles -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="nav nav-pills me-auto mb-2 mb-lg-0">
-                        <!-- Fred -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="fredDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-title="Menjar fred" title="Menjar fred">
-                                Fred
-                            </a>
+                            <a class="nav-link dropdown-toggle" href="#" id="fredDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-title="Menjar fred" title="Menjar fred">Fred</a>
                             <ul class="dropdown-menu" aria-labelledby="fredDropdown">
-                                <li><a class="dropdown-item" href="#entrepaiber">Entrepà de ibèric</a></li>
-                                <li><a class="dropdown-item" href="#entrepaformat">Entrepà formatge</a></li>
+                                <li><a class="dropdown-item" href="entrepa-iberic.html">Entrepà de ibèric</a></li>
+                                <li><a class="dropdown-item" href="entrepa-formatge.html">Entrepà formatge</a></li>
+                                <li><a class="dropdown-item" href="entrepa-pernil.html">Entrepà pernil</a></li>
                             </ul>
                         </li>
                         
-                        <!-- Calent -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="calentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-title="Menjar calent" title="Menjar calent">Calent</a>
                             <ul class="dropdown-menu" aria-labelledby="calentDropdown">
-                                <li><a class="dropdown-item" href="#burger">Burger</a></li>
-                                <li><a class="dropdown-item" href="#frankfurt">Frankfurt</a></li>
+                                <li><a class="dropdown-item" href="burger.html">Burger</a></li>
+                                <li><a class="dropdown-item" href="frankfurt.html">Frankfurt</a></li>
+                                <li><a class="dropdown-item" href="pizza.html">Pizza</a></li>
                             </ul>
                         </li>
                         
-                        <!-- Dolços -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dolcosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-title="Postres dolços" title="Postres dolços">Dolços</a>
+                            <a class="nav-link dropdown-toggle active" href="#" id="dolcosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-title="Postres dolços" title="Postres dolços">Dolços</a>
                             <ul class="dropdown-menu" aria-labelledby="dolcosDropdown">
-                                <li><a class="dropdown-item" href="#magnum">Gelat Magnum</a></li>
-                                <li><a class="dropdown-item" href="#crepe">Crêppe xocolata</a></li>
+                                <li><a class="dropdown-item" href="gelat-magnum.html">Gelat Magnum</a></li>
+                                <li><a class="dropdown-item" href="crepe.html">Crêppe xocolata</a></li>
+                                <li><a class="dropdown-item" href="brownie.html">Brownie</a></li>
                             </ul>
                         </li>
                         
-                        <!-- Begudes -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="begudesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-title="Begudes i refrescs" title="Begudes i refrescs">Begudes</a>
                             <ul class="dropdown-menu" aria-labelledby="begudesDropdown">
-                                <li><a class="dropdown-item" href="#cocacola">Coca Cola</a></li>
-                                <li><a class="dropdown-item" href="#cervesa">Cervesa</a></li>
+                                <li><a class="dropdown-item" href="cocacola.html">Coca Cola</a></li>
+                                <li><a class="dropdown-item" href="cervesa.html">Cervesa</a></li>
+                                <li><a class="dropdown-item" href="suc-natural.html">Suc natural</a></li>
                             </ul>
                         </li>
                     </ul>
                     
-                    <!-- Título del sitio web -->
                     <span class="site-title d-none d-lg-block" id="bienvenida"></span>
                     <span class="site-title d-none d-lg-block">El Millor Menjar de Carrer</span>
                     
-                    <!-- Menú adicional -->
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="quisom.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Coneix la nostra història">Qui som</a>
@@ -87,7 +80,6 @@
         </nav>
    </header>
    
-   <!-- Modal de Login -->
    <div class="login-modal">
        <div class="modal-content-custom">
            <label for="loginModal" class="close-modal">&times;</label>
@@ -109,133 +101,88 @@
        </div>
    </div>
    
-   <!-- Carrusel de imágenes -->
-   <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
-       <div class="carousel-indicators">
-           <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-           <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-           <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-           <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-       </div>
-       <div class="carousel-inner">
-           <div class="carousel-item active">
-               <img src="img/carrousel4.jpg" class="d-block w-100" alt="Burger deliciosa">
-               <div class="carousel-caption d-none d-md-block">
-                   <h5>Burgers Artesanals</h5>
-                   <p>Les millors hamburgueses de la ciutat</p>
-               </div>
-           </div>
-           <div class="carousel-item">
-               <img src="img/carrousel2.jpg" class="d-block w-100" alt="Menjar variado">
-               <div class="carousel-caption d-none d-md-block">
-                   <h5>Menjar Casolà</h5>
-                   <p>Sabors autèntics i frescos</p>
-               </div>
-           </div>
-           <div class="carousel-item">
-               <img src="img/carrousel3.jpg" class="d-block w-100" alt="Postres">
-               <div class="carousel-caption d-none d-md-block">
-                   <h5>Dolços Irresistibles</h5>
-                   <p>El millor final per al teu àpat</p>
-               </div>
-           </div>
-           <div class="carousel-item">
-               <img src="img/carrousel1.jpg" class="d-block w-100" alt="Begudes">
-               <div class="carousel-caption d-none d-md-block">
-                   <h5>Begudes Refrescants</h5>
-                   <p>Per acompanyar el teu menjar</p>
-               </div>
-           </div>
-       </div>
-       <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
-           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-           <span class="visually-hidden">Anterior</span>
-       </button>
-       <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
-           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-           <span class="visually-hidden">Següent</span>
-       </button>
-   </div>
-   
-   <!-- Breadcrumb -->
    <nav aria-label="breadcrumb" class="container mt-3">
        <ol class="breadcrumb">
            <li class="breadcrumb-item"><a href="index.html">Inici</a></li>
-           <li class="breadcrumb-item active" aria-current="page">Home</li>
+           <li class="breadcrumb-item"><a href="index.html">Dolços</a></li>
+           <li class="breadcrumb-item active" aria-current="page">Crêppe Xocolata</li>
        </ol>
    </nav>
    
-   <!-- Cards de productos destacados -->
    <div class="container my-5">
-       <h2 class="text-center mb-4">Productes Destacats</h2>
-       <div class="row g-4">
-           <!-- Card 1 -->
-           <div class="col-md-6 col-lg-3">
-               <div class="card h-100">
-                   <img src="img/carrousel4.jpg" class="card-img-top" alt="Burger Especial">
-                   <div class="card-body">
-                       <h5 class="card-title">Burger Especial</h5>
-                       <p class="card-text">La nostra burger artesanal amb ingredients frescos i salsa secreta. Promoció aquesta setmana!</p>
-                   </div>
-                   <div class="card-footer d-flex justify-content-around">
-                       <button class="btn btn-success btn-sm" data-bs-toggle="tooltip" title="Valorar positivament"><i class="bi bi-hand-thumbs-up"></i> M'agrada</button>
-                       <button class="btn btn-danger btn-sm" data-bs-toggle="tooltip" title="Valorar negativament"><i class="bi bi-hand-thumbs-down"></i> No m'agrada</button>
-                   </div>
-               </div>
+       <div class="row">
+           <div class="col-lg-5">
+               <img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?w=600&h=600&fit=crop" class="img-fluid rounded shadow product-image" alt="Crêppe Xocolata">
            </div>
            
-           <!-- Card 2 -->
-           <div class="col-md-6 col-lg-3">
-               <div class="card h-100">
-                   <img src="img/frsnk.jpg" class="card-img-top" alt="Frankfurt Premium">
-                   <div class="card-body">
-                       <h5 class="card-title">Frankfurt Premium</h5>
-                       <p class="card-text">Frankfurt de qualitat superior amb pa cruixent i una gran varietat de salses per triar.</p>
+           <div class="col-lg-7">
+               <h1 class="mb-4">Crêppe Xocolata</h1>
+               
+               <div class="product-info">
+                   <div class="mb-3">
+                       <span class="badge bg-warning text-dark fs-5">
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           5.0/5
+                       </span>
                    </div>
-                   <div class="card-footer d-flex justify-content-around">
-                       <button class="btn btn-success btn-sm" data-bs-toggle="tooltip" title="Valorar positivament"><i class="bi bi-hand-thumbs-up"></i> M'agrada</button>
-                       <button class="btn btn-danger btn-sm" data-bs-toggle="tooltip" title="Valorar negativament"><i class="bi bi-hand-thumbs-down"></i> No m'agrada</button>
+                   
+                   <div class="mb-4">
+                       <h3 class="text-success">
+                           <i class="bi bi-tag-fill"></i> 6.80€
+                       </h3>
                    </div>
-               </div>
-           </div>
-           
-           <!-- Card 3 -->
-           <div class="col-md-6 col-lg-3">
-               <div class="card h-100">
-                   <img src="img/carrousel3.jpg" class="card-img-top" alt="Gelat Artesanal">
-                   <div class="card-body">
-                       <h5 class="card-title">Gelat Artesanal</h5>
-                       <p class="card-text">Gelats artesanals amb sabors únics. Novetat: sabor de xocolata belga amb avellanes.</p>
+                   
+                   <h4><i class="bi bi-card-text"></i> Descripció</h4>
+                   <p class="lead">
+                       Crêpe francesa feta al moment amb xocolata de primera qualitat. Fina, suau i deliciosament dolça. 
+                       Un clàssic de la pastisseria francesa que t'encantarà.
+                   </p>
+                   
+                   <h4><i class="bi bi-list-ul"></i> Ingredients</h4>
+                   <ul class="list-group mb-4">
+                       <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Massa de crêpe artesanal</li>
+                       <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Xocolata Nutella premium</li>
+                       <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Plàtan fresc</li>
+                       <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Nata muntada</li>
+                       <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Sucre glas</li>
+                   </ul>
+                   
+                   <div class="row mb-4">
+                       <div class="col-md-6">
+                           <div class="info-box">
+                               <i class="bi bi-globe text-primary fs-4"></i>
+                               <strong>Origen:</strong> Cuina Francesa
+                           </div>
+                       </div>
+                       <div class="col-md-6">
+                           <div class="info-box">
+                               <i class="bi bi-clock text-info fs-4"></i>
+                               <strong>Temps de preparació:</strong> 8 min
+                           </div>
+                       </div>
                    </div>
-                   <div class="card-footer d-flex justify-content-around">
-                       <button class="btn btn-success btn-sm" data-bs-toggle="tooltip" title="Valorar positivament"><i class="bi bi-hand-thumbs-up"></i> M'agrada</button>
-                       <button class="btn btn-danger btn-sm" data-bs-toggle="tooltip" title="Valorar negativament"><i class="bi bi-hand-thumbs-down"></i> No m'agrada</button>
-                   </div>
-               </div>
-           </div>
-           
-           <!-- Card 4 -->
-           <div class="col-md-6 col-lg-3">
-               <div class="card h-100">
-                   <img src="https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=400&h=300&fit=crop" class="card-img-top" alt="Beguda Natural">
-                   <div class="card-body">
-                       <h5 class="card-title">Beguda Natural</h5>
-                       <p class="card-text">Sucs naturals fets al moment amb fruita fresca. Perfectes per refrescar-te!</p>
-                   </div>
-                   <div class="card-footer d-flex justify-content-around">
-                       <button class="btn btn-success btn-sm" data-bs-toggle="tooltip" title="Valorar positivament"><i class="bi bi-hand-thumbs-up"></i> M'agrada</button>
-                       <button class="btn btn-danger btn-sm" data-bs-toggle="tooltip" title="Valorar negativament"><i class="bi bi-hand-thumbs-down"></i> No m'agrada</button>
+                   
+                   <div class="d-flex gap-2">
+                       <button class="btn btn-success btn-lg" data-bs-toggle="tooltip" title="Valorar positivament">
+                           <i class="bi bi-hand-thumbs-up"></i> M'agrada
+                       </button>
+                       <button class="btn btn-danger btn-lg" data-bs-toggle="tooltip" title="Valorar negativament">
+                           <i class="bi bi-hand-thumbs-down"></i> No m'agrada
+                       </button>
                    </div>
                </div>
            </div>
        </div>
    </div>
    
-   <!-- Paginación -->
    <div class="container my-4">
        <nav aria-label="Paginació de productes">
            <ul class="pagination justify-content-center">
-               <li class="page-item active">
+               <li class="page-item">
                    <a class="page-link" href="index.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Pàgina principal">1</a>
                </li>
                <li class="page-item">
@@ -259,7 +206,7 @@
                <li class="page-item">
                    <a class="page-link" href="gelat-magnum.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Gelat Magnum">8</a>
                </li>
-               <li class="page-item">
+               <li class="page-item active">
                    <a class="page-link" href="crepe.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Crêppe xocolata">9</a>
                </li>
                <li class="page-item">
@@ -278,7 +225,6 @@
        </nav>
    </div>
    
-   <!-- Alerta de Cookies -->
    <div class="alert alert-warning alert-dismissible fade show cookie-alert" role="alert" id="cookieAlert">
        <i class="bi bi-info-circle-fill"></i>
        <strong>Cookies:</strong> Aquest lloc web utilitza cookies per millorar la teva experiència de navegació i guardar les teves preferències.
@@ -308,6 +254,7 @@
            <p class="mb-0">&copy; 2026 Food Truck. Tots els drets reservats.</p>
        </div>
    </footer>
+   
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    <script src="script.js"></script>
 </body>
